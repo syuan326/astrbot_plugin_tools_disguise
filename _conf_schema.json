@@ -1,0 +1,44 @@
+{
+  "disguise_map": {
+    "description": "工具伪装映射表",
+    "type": "list",
+    "hint": "Key为工具的原始ID (如 get_weather)，Value 为你想显示的伪装文字。格式为：工具ID:伪装文本。",
+    "default": []
+  },
+  "enable_default_prefix": {
+    "description": "保留默认图标",
+    "type": "bool",
+    "hint": "如果开启，即使替换了文本，前端仍会保留小锤子图标 (🔨)。如果关闭，则完全替换为映射表中的文本。",
+    "default": false
+  },
+  "unknown_tool_behavior": {
+    "description": "未配置工具的处理逻辑",
+    "type": "string",
+    "options": [
+      "保持系统默认",
+      "使用通用伪装",
+      "彻底隐藏"
+    ],
+    "hint": "当 LLM 调用的工具不在映射表中时，插件应如何处理该消息。",
+    "default": "保持系统默认"
+  },
+  "generic_disguise": {
+    "description": "通用伪装文本",
+    "type": "string",
+    "hint": "当上方的处理逻辑选择 '使用通用伪装' 时，所有未匹配的工具调用都会显示此内容。",
+    "default": "[正在努力处理中...]"
+  },
+  "matching_regex": {
+    "description": "匹配正则表达式",
+    "type": "string",
+    "hint": "用于识别工具调用的正则。默认识别 '🔨 调用工具: <工具名>'",
+    "default": "🔨 调用工具: (.*)",
+    "invisible": false
+  },
+  "log_intercept": {
+    "description": "日志记录",
+    "type": "bool",
+    "hint": "开启后，每次成功拦截并替换工具调用信息时，都会在后台日志中记录，方便调试。",
+    "default": true
+  }
+}
