@@ -2,7 +2,7 @@ from astrbot.api.event import filter, AstrMessageEvent
 from astrbot.api.star import Context, Star, register
 from astrbot.api.message_components import Plain
 from astrbot.api import AstrBotConfig
-from func import replace_text  # 确保 func.py 在同目录下
+from .func import replace_text  # 确保 func.py 在同目录下
 
 @register("text_modifier", "YourName", "高优先级消息修改插件", "1.0.0")
 class TextModifierPlugin(Star):
