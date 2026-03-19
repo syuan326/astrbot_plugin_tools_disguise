@@ -1,5 +1,5 @@
 name: astrbot_plugin_tool_disguise
 author: syuan326
-description: 为 LLM 工具调用信息提供自定义伪装。支持在配置文件中为特定的工具调用（如 🔨 调用工具： xxx）设置个性化的回复文本，提升交互趣味性。
+description: 为 LLM 工具调用信息提供自定义伪装。支持在配置文件中为特定的工具调用
 version: 1.0.0
 repo: https://github.com/syuan326/astrbot_plugin_tool_disguise
